@@ -2,7 +2,7 @@
 
 ![alt text](img/spherical_comparison.png)
 
-These spherical projection images were regenerated using the object pose information released by the GenRe authors to replicate the object pose.
+These spherical projection images were regenerated using the object pose information released by the GenRe authors to replicate the object pose before running the projection. The comparison above is between data released by the authors and data generated using our code.
 
 Notes regarding spherical inpainting
 
