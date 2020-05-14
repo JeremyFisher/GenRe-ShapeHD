@@ -1,4 +1,4 @@
-# Regenerate GenRe Mitsuba Renders using Blender
+# Render Training Data Using Blender to Replicate Mitsuba Renders
 
 ![alt text](img/rendering_comparison.png)
 
