@@ -10,6 +10,19 @@ Download the training data for the 13/42 split on ShapeNet using the following c
 wget 'link to be added'
 ```
 
+## Training the Model
+
+In the directory where the repository is cloned, make a symlink to where the data was extracted
+
+```
+ln -s path/to/data ./downloads/data/shapenet
+```
+
+Then as described in the original repository, follow these steps to train the GenRe model.
+1. Train the depth estimator with `scripts/train_marrnet1.sh`
+1. Train the spherical inpainting network with `scripts/train_inpaint.sh`
+1. Train the full model with `scripts/train_full_genre.sh`
+
 ## Training Data Generation 
 
 The pages below contain information to generate ground truth data for GenRe.
