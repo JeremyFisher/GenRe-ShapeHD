@@ -12,7 +12,7 @@ wget 'link to be added'
 
 ## Training Data Generation 
 
-The pages below contain information to generate ground truth data for genre
+The pages below contain information to generate ground truth data for GenRe.
 1. [Image Rendering](md/rendering.md)
 2. [Full Spherical Images](md/spherical.md)
 3. [TDF Voxel Grids](md/voxel.md)
