@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-outdir=./output/genre
-inpaint_path=/path/to/trained/inpaint.pt
+outdir=/output/genre
+inpaint_path=/path/to/trained/inpaint
+
+set -e
 
 if [ $# -lt 2 ]; then
     echo "Usage: $0 gpu class[ ...]"
     exit 1
 fi
 gpu="$1"
-class="$2"
 shift # shift the remaining arguments
 shift
 
@@ -28,7 +29,7 @@ python train.py \
     --optim adam \
     --lr 1e-4 \
     --epoch 1000 \
-    --vis_batches_vali 10 \
+    --vis_batches_vali 3 \
     --gpu "$gpu" \
     --save_net 10 \
     --workers 4 \
@@ -37,6 +38,7 @@ python train.py \
     --tensorboard \
     --surface_weight 10 \
     --inpaint_path "$inpaint_path" \
+    --resume -1 \
     $*
 
 source deactivate

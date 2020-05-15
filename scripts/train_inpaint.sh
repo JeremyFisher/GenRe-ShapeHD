@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 outdir=./output/inpaint
-net1_path=/path/to/trained/marrnet1.pt
+net1_path=/path/to/trained/marrnet1
 
 if [ $# -lt 2 ]; then
     echo "Usage: $0 gpu class[ ...]"
@@ -9,6 +9,7 @@ if [ $# -lt 2 ]; then
 fi
 gpu="$1"
 class="$2"
+
 shift # shift the remaining arguments
 shift
 

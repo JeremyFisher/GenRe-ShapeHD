@@ -8,6 +8,7 @@ if [ $# -lt 2 ]; then
 fi
 gpu="$1"
 class="$2"
+
 shift # shift the remaining arguments
 shift
 
@@ -34,6 +35,7 @@ python train.py \
     --logdir "$outdir" \
     --suffix '{classes}' \
     --tensorboard \
+    --resume -1 \
     $*
 
 source deactivate

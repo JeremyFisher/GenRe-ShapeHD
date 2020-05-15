@@ -73,6 +73,7 @@ class Dataset(data.Dataset):
         'display': '03211117',
         'vessel': '04530566',
         'rifle': '04090263',
+        '13_seen':'04256520+02933112+03691459+04401088+02828884+04090263+02958343+03001627+02691156+04379243+03211117+03636649+04530566',
         'small': '03001627+04379243+02933112+04256520+02958343+03636649+02691156+04530566',
         'all-but-table': '02691156+02747177+02773838+02801938+02808440+02818832+02828884+02843684+02871439+02876657+02880940+02924116+02933112+02942699+02946921+02954340+02958343+02992529+03001627+03046257+03085013+03207941+03211117+03261776+03325088+03337140+03467517+03513137+03593526+03624134+03636649+03642806+03691459+03710193+03759954+03761084+03790512+03797390+03928116+03938244+03948459+03991062+04004475+04074963+04090263+04099429+04225987+04256520+04330267+04401088+04460130+04468005+04530566+04554684',
         'all-but-chair': '02691156+02747177+02773838+02801938+02808440+02818832+02828884+02843684+02871439+02876657+02880940+02924116+02933112+02942699+02946921+02954340+02958343+02992529+03046257+03085013+03207941+03211117+03261776+03325088+03337140+03467517+03513137+03593526+03624134+03636649+03642806+03691459+03710193+03759954+03761084+03790512+03797390+03928116+03938244+03948459+03991062+04004475+04074963+04090263+04099429+04225987+04256520+04330267+04379243+04401088+04460130+04468005+04530566+04554684',
@@ -179,11 +180,21 @@ class Dataset(data.Dataset):
                     # Right now .npy must be depth_minmax
                     sample_loaded['depth_minmax'] = np.load(v)
                 elif v.endswith('_128.npz'):
-                    sample_loaded['voxel'] = np.load(v)['voxel'][None, ...]
+                    vox_sample = np.load(v)['voxel'][None, ...]
+
+                    # this is to get our data to work well with the dilation procedure
+                    # done by the GenRe model during loading data 
+                    vox_sample[vox_sample>0.6] = 1
+                    vox_sample[vox_sample<0.4] = 0
+
+                    sample_loaded['voxel'] = vox_sample
+
                 elif v.endswith('_spherical.npz'):
                     spherical_data = np.load(v)
                     sample_loaded['spherical_object'] = spherical_data['obj_spherical'][None, ...]
-                    sample_loaded['spherical_depth'] = spherical_data['depth_spherical'][None, ...]
+
+                    #partial spherical maps are not needed
+                    #sample_loaded['spherical_depth'] = spherical_data['depth_spherical'][None, ...]
                 elif v.endswith('.mat'):
                     # Right now .mat must be voxel_canon
                     sample_loaded['voxel_canon'] = loadmat(v)['voxel'][None, ...]
