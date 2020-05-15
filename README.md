@@ -22,6 +22,32 @@ Then as described in the original repository, follow [the steps](https://github.
 
 ## Testing the Model
 
+1. Download `data_split.json` by running `wget 'link to be added'`
+2. Generate symlinks for testing data by running 
+
+        python util_scripts/make_genre_test_13_seen_symlink.py
+        python util_scripts/make_genre_test_42_unseen_symlink.py
+        
+3. Run the testing scripts
+
+        bash scripts/test_genre_seen_13.sh
+        bash scripts/test_genre_unseen_42.sh
+        
+4. Postprocess the data to be in `synset/object` directory structure, since it isn't so by default.
+
+        python util_scripts/postprocess_13_seen_pred.py
+        python util_scripts/postprocess_42_unseen_pred.py
+
+5. Run the testing scripts
+
+        python eval/eval_seen_13_GenRe.py
+        python eval/eval_unseen_42_GenRe.py
+   
+   and run the following scripts to load the results
+        
+        python eval/load_seen_13_GenRe.py
+        python eval/load_unseen_42_GenRe.py
+        
 ## Training Data Generation 
 
 The pages below contain information to generate ground truth data for GenRe.
