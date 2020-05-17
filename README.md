@@ -12,7 +12,7 @@ python setup.py build_ext --inplace
 Download the training data for the 13/42 split on ShapeNet using the following command
 
 ```
-wget 'link to be added'
+cd eval; wget https://www.dropbox.com/s/7shqu6krvs9x1ib/data_split.json; cd ..
 ```
 
 ## Training the Model
