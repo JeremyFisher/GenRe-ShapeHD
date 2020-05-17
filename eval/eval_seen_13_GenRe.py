@@ -14,8 +14,8 @@ import argparse
 
 home = os.path.expanduser("~")
 
-GT_vox_dir = os.path.join(home, 'ShapeNet55_EVC_CMASS_GenRe_TuDF_3_seen_reduced')
-pred_dir = os.path.join(home, 'eval_GenRe', 'ShapeNet13_seen_test_v2')
+GT_vox_dir = os.path.join(home, 'path_to_GT')
+pred_dir = os.path.join(home, 'path_to_predictions')
 
 pointcloud_size=100000
 
