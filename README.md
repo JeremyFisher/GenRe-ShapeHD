@@ -12,7 +12,7 @@ python setup.py build_ext --inplace
 Download the training data for the 13/42 split on ShapeNet using the following command
 
 ```
-wget 'link to be added'
+tbd
 ```
 
 ## Training the Model
@@ -27,7 +27,7 @@ Then as described in the original repository, follow [the steps](https://github.
 
 ## Testing the Model
 
-1. Download `data_split.json` by running `wget 'link to be added'`
+1. Download `data_split.json` by running `cd eval; wget https://www.dropbox.com/s/7shqu6krvs9x1ib/data_split.json; cd ..`
 2. Generate symlinks for testing data by running 
 
         python util_scripts/make_genre_test_13_seen_symlink.py
@@ -43,15 +43,15 @@ Then as described in the original repository, follow [the steps](https://github.
         python util_scripts/postprocess_13_seen_pred.py
         python util_scripts/postprocess_42_unseen_pred.py
 
-5. Run the testing scripts
+5. Run the testing scripts in the `eval` directory
 
-        python eval/eval_seen_13_GenRe.py
-        python eval/eval_unseen_42_GenRe.py
+        python eval_seen_13_GenRe.py
+        python eval_unseen_42_GenRe.py
    
    and run the following scripts to load the results
         
-        python eval/load_seen_13_GenRe.py
-        python eval/load_unseen_42_GenRe.py
+        python load_seen_13_GenRe.py
+        python load_unseen_42_GenRe.py
         
 ## Training Data Generation 
 
