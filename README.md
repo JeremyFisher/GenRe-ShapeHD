@@ -43,15 +43,15 @@ Then as described in the original repository, follow [the steps](https://github.
         python util_scripts/postprocess_13_seen_pred.py
         python util_scripts/postprocess_42_unseen_pred.py
 
-5. Run the testing scripts
+5. Run the testing scripts in the `eval` directory
 
-        python eval/eval_seen_13_GenRe.py
-        python eval/eval_unseen_42_GenRe.py
+        python eval_seen_13_GenRe.py
+        python eval_unseen_42_GenRe.py
    
    and run the following scripts to load the results
         
-        python eval/load_seen_13_GenRe.py
-        python eval/load_unseen_42_GenRe.py
+        python load_seen_13_GenRe.py
+        python load_unseen_42_GenRe.py
         
 ## Training Data Generation 
 
