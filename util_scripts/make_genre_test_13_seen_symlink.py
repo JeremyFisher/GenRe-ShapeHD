@@ -12,6 +12,10 @@ seen_synsets = ['02691156', '02828884', '02933112',
                 '03636649', '03691459', '04090263',
                 '04256520', '04379243', '04401088',
                 '04530566']
+with open('data_split.json', 'r') as f:
+    split_dict = json.load(f)
+
+test_dict = split_dict['test']
 
 print("making symlinks for testing, this should be fast..")
 for synset in seen_synsets:
@@ -25,6 +29,9 @@ for synset in seen_synsets:
     objects = os.listdir(syn_path)
 
     for idx, obj in enumerate(objects):
+        
+        if obj not in test_dict[synset]:
+            continue
 
         obj_path = os.path.join(syn_path, obj)
 
