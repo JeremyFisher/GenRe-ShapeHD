@@ -4,8 +4,8 @@ import numpy as np
 
 from collections import defaultdict
 
-src_path  = '../downloads/data/shapenet'
-dest_path = '../downloads/data/test_13_42_v2/'
+src_path  = './downloads/data/shapenet'
+dest_path = './downloads/data/test_13_42_v2/'
 
 unseen_synsets = ['02747177', '02801938', '02818832', '02871439', '02880940',
                   '02942699', '02954340', '03046257', '03207941', '03325088',
