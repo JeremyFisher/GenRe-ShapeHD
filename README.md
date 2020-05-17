@@ -2,6 +2,11 @@
 
 This is a repository with some minimal extensions of the original [GenRe Repository](https://github.com/xiumingzhang/GenRe-ShapeHD) to allow for training on different ShapeNet splits. Please refer to the [original paper](http://genre.csail.mit.edu/papers/genre_nips.pdf) as well. The main focus of this repository is generating ground truth data for training. For setup please follow the instructions in the original repository.
 
+To run our evaluation code, please compile OccNet extension modules in `./eval/mesh_gen_utils`
+```bash
+python setup.py build_ext --inplace
+```
+
 ## Training Data Download
 
 Download the training data for the 13/42 split on ShapeNet using the following command
