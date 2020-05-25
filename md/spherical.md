@@ -12,4 +12,4 @@ Notes regarding spherical inpainting
 
 ## Code
 
-The code to generate Spherical Maps using is available [here](link-to-code). The original data can be replicated by running this code on the replicated renders which can be obtained as [described here](rendering.md).
+The instructions to generate Spherical Maps using is available [here](link-to-code). The original data can be replicated by running this code on the replicated renders which can be obtained as [described here](rendering.md).
