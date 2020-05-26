@@ -12,4 +12,4 @@ Notes regarding voxel grids
 
 ## Code
 
-The code to generate truncated unsinged distance voxel grids using is available [here](link-to-code). The original data can be replicated by running this code on the replicated renders which can be obtained as [described here](rendering.md).
+The code to generate truncated unsinged distance voxel grids using is available [here](../generate_gt/).
