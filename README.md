@@ -27,7 +27,7 @@ Then as described in the original repository, follow [the steps](https://github.
 
 ## Testing the Model
 
-1. Download `data_split.json` by running `cd eval; wget https://www.dropbox.com/s/7shqu6krvs9x1ib/data_split.json; cd ..`
+1. Download `data_split.json` by running `cd util_scripts; wget https://www.dropbox.com/s/7shqu6krvs9x1ib/data_split.json; cd ..`
 2. Generate symlinks for testing data by running 
 
         python util_scripts/make_genre_test_13_seen_symlink.py
