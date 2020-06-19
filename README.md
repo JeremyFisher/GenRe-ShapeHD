@@ -9,10 +9,10 @@ python setup.py build_ext --inplace
 
 ## Training Data Download
 
-Download the training data for the 13/42 split on ShapeNet using the following command
+Download the training data for the 13/42 split on ShapeNet using the following command. Not that ~620GB of space is required to download this data.
 
 ```
-tbd
+bash download.sh
 ```
 
 ## Training the Model
