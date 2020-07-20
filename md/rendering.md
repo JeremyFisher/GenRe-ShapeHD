@@ -10,4 +10,4 @@ Notes about example image
 
 ## Code
 
-The code to replicate the GenRe training input images using a Blender is available [here](link-to-code)
+The code to replicate the GenRe training input images using a Blender is available [here](https://github.com/devlearning-gt/3DShapeGen/blob/master/Rendering/README.md)
